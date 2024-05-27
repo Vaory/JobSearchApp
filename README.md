@@ -30,12 +30,6 @@
   <img src="GitScreenshots/Screenshot4.png" width="200" />
 </p>
 
-## Экран авторизации по коду
-<p float="left">
-  <img src="GitScreenshots/Screenshot3.png" width="200" />
-  <img src="GitScreenshots/Screenshot4.png" width="200" />
-</p>
-
 ## Экран "Поиска" с отображением превью вакансий
 <p float="left">
   <img src="GitScreenshots/Screenshot5.png" width="200" />

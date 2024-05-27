@@ -9,6 +9,7 @@
 - MVVM + Coordinator
 - Ui, дизайн, верстка - Figma
 - Вакансии и данные - JSON
+- Функционал приложения - ТЗ
 
 # Запуск приложения
 ## - Через Xcode (Canvas)
@@ -16,11 +17,17 @@
 - Отобразить canvas через "CoordinatorView"
 ## - Через Simulator
 
-# Реализованные возможности(согласно ТЗ) и скриншоты
+# Screen shots
 ## Экран логина
 <p float="left">
   <img src="GitScreenshots/Screenshot1png.png" width="200" />
   <img src="GitScreenshots/Screenshot2.png" width="200" />
+</p>
+  
+## Экран авторизации по коду
+<p float="left">
+  <img src="GitScreenshots/Screenshot3.png" width="200" />
+  <img src="GitScreenshots/Screenshot4.png" width="200" />
 </p>
 
 ## Экран авторизации по коду
@@ -33,10 +40,11 @@
 <p float="left">
   <img src="GitScreenshots/Screenshot5.png" width="200" />
   <img src="GitScreenshots/Screenshot6.png" width="200" />
+  
 </p>
 
 
-## Экран "Детального просмотра" с отображением полной информации вакансий
+## Экран "Детального просмотра" с отображением полной информации вакансии
 <p float="left">
   <img src="GitScreenshots/Screenshot7.png" width="200" />
 </p>

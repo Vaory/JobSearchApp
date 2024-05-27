@@ -1,5 +1,5 @@
 //
-//  JobSearchAppApp.swift
+//  JobSearchApp.swift
 //  JobSearchApp
 //
 //  Created by Mikhail Demichev on 04.04.2024.
@@ -8,10 +8,11 @@
 import SwiftUI
 
 @main
-struct JobSearchAppApp: App {
+struct JobSearchApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            CoordinatorView()
         }
     }
 }
+

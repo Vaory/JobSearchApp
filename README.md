@@ -1,11 +1,10 @@
 Тестовое Задание 
 # Job Search Application
 
-Тестовое задание на позицию IOS-разработчика в компанию EffectiveMobile
-
 # Использованный стэк технологий:
 - Swift5, Xcode
 - SwiftUI
+- Combine
 - MVVM + Coordinator
 - Ui, дизайн, верстка - Figma
 - Вакансии и данные - JSON
@@ -17,12 +16,13 @@
 - Отобразить canvas через "CoordinatorView"
 ## - Через Simulator
 
-# Screen shots
+# Обзор проекта
 ## Экран логина
 <p float="left">
   <img src="GitScreenshots/Screenshot1png.png" width="200" />
   <img src="GitScreenshots/Screenshot2.png" width="200" />
 </p>
+
   
 ## Экран авторизации по коду
 <p float="left">

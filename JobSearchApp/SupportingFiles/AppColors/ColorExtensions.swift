@@ -1,5 +1,5 @@
 //
-//  UiColors.swift
+//  ColorExtensions.swift
 //  JobSearchApp
 //
 //  Created by Mikhail Demichev on 04.04.2024.
@@ -9,12 +9,13 @@ import SwiftUI
 
 extension Color {
     
+    // Кастомные цвета согласно макету
     static let uiBlack = Color(hex: 0x000000)
-    static let uiGrey1 = Color(hex: 0x222325)
-    static let uiGrey2 = Color(hex: 0x313234)
-    static let uiGrey3 = Color(hex: 0x858688)
-    static let uiGrey4 = Color(hex: 0x9F9F9F)
-    static let uiGrey5 = Color(hex: 0xDBDBDB)
+    static let uiGray1 = Color(hex: 0x222325)
+    static let uiGray2 = Color(hex: 0x313234)
+    static let uiGray3 = Color(hex: 0x858688)
+    static let uiGray4 = Color(hex: 0x9F9F9F)
+    static let uiGray5 = Color(hex: 0xDBDBDB)
     static let uiWhite = Color(hex: 0xFFFFFF)
     static let uiBlue = Color(hex: 0x2B7EFE)
     static let uiDarkBlue = Color(hex: 0x00427D)

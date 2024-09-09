@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EmployerLogin: View {
     var body: some View {
-        Color.uiGrey1
+        Color.uiGray1
             .cornerRadius(8)
             .frame(height: 142)
             .overlay(
@@ -33,6 +33,7 @@ struct EmployerLogin: View {
                     }) {
                         Text("Я ищу сотрудников")
                             .frame(maxWidth: .infinity)
+                            .font(Font.custom("SFProDisplay-Regular", size: 14))
                             .frame(height: 32)
                             .background(Color.uiGreen)
                             .foregroundColor(.uiWhite)

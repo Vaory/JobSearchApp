@@ -16,7 +16,7 @@ struct RecomendationBlock: View {
         
        
         init(imageName: String,
-             imageBackground: Color = .uiGrey4,
+             imageBackground: Color = .uiGray4,
              title: LocalizedStringKey,
              buttonTitle: LocalizedStringKey? = nil) {
             self.imageName = imageName
@@ -30,8 +30,7 @@ struct RecomendationBlock: View {
                 Image(imageName)
                     .resizable()
                     .frame(width: 32, height: 32)
-                   // .padding(8)
-                    .background(Color.uiGrey1)
+                    .background(Color.uiGray1)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.bottom, 16)
                 Text(title)
@@ -47,7 +46,7 @@ struct RecomendationBlock: View {
             }
             .padding(8)
             .frame(width: 132 ,height: 120)
-            .background(Color.uiGrey1, in: RoundedRectangle(cornerRadius: 8))
+            .background(Color.uiGray1, in: RoundedRectangle(cornerRadius: 8))
         }
     }
 
@@ -56,3 +55,4 @@ struct RecomendationBlock_Previews: PreviewProvider {
         RecomendationBlock(imageName: "Вакансии рядом", title: "Вакансии рядом c вами")
     }
 }
+

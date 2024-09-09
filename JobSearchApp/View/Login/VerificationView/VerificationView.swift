@@ -8,7 +8,9 @@ import SwiftUI
 
 struct VerificationView: View {
     
-    @ObservedObject private var viewModel = EnteranceViewModel()
+    @EnvironmentObject var viewModel: AppViewModel
+    @EnvironmentObject private var coordinator: Coordinator
+    
     @State var enteredVerificationCode: String = ""
     @FocusState private var isVerificationFieldFocused: Bool
     private let numberOfVerificationFields = 4
@@ -41,13 +43,15 @@ struct VerificationView: View {
             }
             
             Button(action: {
-                print("")
+                coordinator.changeTab(to: .search)
+                viewModel.isVerifyed = true
+               
             }, label: {
                 Text("Подтвердить")
                     .frame(height: 48)
                     .frame(maxWidth: .infinity)
                     .font(.custom("SFProDisplay-Semibold", size: 14))
-                    .foregroundColor(enteredVerificationCode.count < numberOfVerificationFields ? .uiGrey4 : .uiWhite)
+                    .foregroundColor(enteredVerificationCode.count < numberOfVerificationFields ? .uiGray4 : .uiWhite)
                     .background(enteredVerificationCode.count < numberOfVerificationFields  ? Color.uiDarkBlue : Color.uiBlue)
                     .cornerRadius(8)
             }).disabled(enteredVerificationCode.count < numberOfVerificationFields)
@@ -61,6 +65,6 @@ struct VerificationView: View {
 
 struct SecondEnteranceView_Previews: PreviewProvider {
     static var previews: some View {
-        VerificationView()
+        VerificationView().environmentObject(AppViewModel())
     }
 }

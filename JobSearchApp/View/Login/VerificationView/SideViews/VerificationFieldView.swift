@@ -92,7 +92,7 @@ struct VerificationFieldModifier: ViewModifier {
             .keyboardType(.numberPad)
             .foregroundColor(.uiWhite)
             .colorScheme(.dark)
-            .background(Color.uiGrey2)
+            .background(Color.uiGray2)
             .cornerRadius(8)
             .font(.system(size: 25))
             .onReceive(Just(pin)) { newValue in

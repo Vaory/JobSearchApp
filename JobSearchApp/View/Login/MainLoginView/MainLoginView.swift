@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct MainLoginView: View {
-                                                            
+                                    
     var body: some View {
         
         VStack (alignment: .leading) {
@@ -20,7 +20,7 @@ struct MainLoginView: View {
             
             Spacer()
                 
-            EmploeeLogin()
+            EmployeeLogin()
             
             Spacer().frame(height: 22)
             
@@ -29,9 +29,7 @@ struct MainLoginView: View {
             Spacer()
             
         }
-        .padding(.horizontal, 17)
         .padding(.top, 69)
-        .edgesIgnoringSafeArea(.top)
         .background(Color.uiBlack)
     }
     

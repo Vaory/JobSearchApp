@@ -12,8 +12,8 @@ struct EmployeeLogin: View {
     @EnvironmentObject var viewModel: AppViewModel
     @EnvironmentObject private var coordinator: Coordinator
 
-    @State private var isEmailCorrect = true
-    @State private var showingClearButton = false
+    @State private var isEmailIncorrect = false
+    
     var emailText: String = ""
     
     private let errorText = Text("Введен неправильный e-mail")
@@ -31,7 +31,7 @@ struct EmployeeLogin: View {
                         
                         Text("Поиск работы")
                             .foregroundColor(.uiWhite)
-                            .font(Font.custom("SFProDisplay-Regular", size: 24))
+                            .fontTitle3()
                             .multilineTextAlignment(.leading)
                         
                         ZStack {
@@ -47,11 +47,13 @@ struct EmployeeLogin: View {
                                 .background(Color.uiGray2)
                                 .cornerRadius(8)
                                 .onChange(of: viewModel.emailAdressText) { newValue in
-                                    isEmailCorrect = viewModel.emailValidation(email: newValue)
+                                    if isEmailIncorrect {
+                                        isEmailIncorrect = false
+                                    }
                                 }
                                 .overlay(
                                     RoundedRectangle(cornerRadius: 8)
-                                        .stroke(isEmailCorrect ? Color.clear : Color.uiRed, lineWidth: 1)
+                                        .stroke(isEmailIncorrect ? Color.uiRed : Color.clear, lineWidth: 1)
                                 )
                             
                             HStack {
@@ -86,16 +88,17 @@ struct EmployeeLogin: View {
                             .padding(.leading, 8)
                         }
                         
-                        if !isEmailCorrect && !viewModel.emailAdressText.isEmpty {
+                        if isEmailIncorrect && !viewModel.emailAdressText.isEmpty {
                             errorText
                         }
                         
                         HStack {
                             
                             Button(action: {
-                                isEmailCorrect = viewModel.emailValidation(email: viewModel.emailAdressText)
+                                let isValidEmail = viewModel.emailValidation(email: viewModel.emailAdressText)
+                                isEmailIncorrect = !isValidEmail
 
-                                if isEmailCorrect {
+                                if isValidEmail {
                                     coordinator.changeTab(to: .verifying)
                                 }
                                 
@@ -121,7 +124,6 @@ struct EmployeeLogin: View {
         }
           
     }
-    
 }
 
 struct EmployeeLogin_Previews: PreviewProvider {

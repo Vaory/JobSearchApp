@@ -8,8 +8,19 @@
 import SwiftUI
 
 struct FavoritesIndication: View {
+    @ObservedObject var viewModel = AppViewModel()
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        ZStack {
+            
+            Circle()
+                .frame(height: 13)
+                .foregroundColor(.uiRed)
+            
+            Text("\(viewModel.favoriteVacancies.count)")
+                .fontNumber()
+                .foregroundColor(.uiWhite)
+        }
     }
 }
 

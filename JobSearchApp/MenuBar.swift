@@ -8,11 +8,18 @@
 import SwiftUI
 
 struct MenuBar: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    @EnvironmentObject private var coordinator: Coordinator
+    
+    init() {}
+    
+    private var activeTab: Coordinator.Page? {
+        return coordinator.tabs.contains(coordinator.startPage) ? coordinator.startPage : nil
     }
-}
-
+    
+    var body: some View {
+        TabBarVIew
+    }
+    
 struct MenuBar_Previews: PreviewProvider {
     static var previews: some View {
         MenuBar()

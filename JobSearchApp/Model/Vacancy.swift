@@ -12,7 +12,6 @@ struct Root: Decodable {
     let vacancies: [Vacancy]
 }
 
-// Модель объекта Vacancy
 struct Vacancy: Decodable, Identifiable {
     let id: String 
     let lookingNumber: Int?

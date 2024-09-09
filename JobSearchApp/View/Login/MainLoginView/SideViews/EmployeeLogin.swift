@@ -21,7 +21,6 @@ struct EmployeeLogin: View {
         .foregroundColor(.uiRed)
         
     var body: some View {
-        
         ZStack {
             Color.uiGray1
                 .cornerRadius(8)
@@ -69,7 +68,8 @@ struct EmployeeLogin: View {
                                             .font(Font.custom("SFProDisplay-Regular", size: 14))
                                             .foregroundColor(.uiGray4)
                                     }
-                                }.allowsHitTesting(false)
+                                }
+                                .allowsHitTesting(false)
                                 
                                 Spacer()
                                 
@@ -91,9 +91,7 @@ struct EmployeeLogin: View {
                         if isEmailIncorrect && !viewModel.emailAdressText.isEmpty {
                             errorText
                         }
-                        
                         HStack {
-                            
                             Button(action: {
                                 let isValidEmail = viewModel.emailValidation(email: viewModel.emailAdressText)
                                 isEmailIncorrect = !isValidEmail
@@ -118,11 +116,13 @@ struct EmployeeLogin: View {
                             }, label: {
                                 Text("Войти с паролем")
                                     .font(Font.custom("SFProDisplay-Regular", size: 14))
-                            }) .padding(.leading, 24)
-                        }.multilineTextAlignment(.trailing)
-                    }.padding(.horizontal, 17))
+                            })
+                            .padding(.leading, 24)
+                        }
+                        .multilineTextAlignment(.trailing)
+                    }
+                    .padding(.horizontal, 17))
         }
-          
     }
 }
 

@@ -13,7 +13,6 @@ struct ResponsesView: View {
     
     var body: some View {
         VStack {
-            
             Text("Отклики")
                 .foregroundColor(.uiWhite)
         }

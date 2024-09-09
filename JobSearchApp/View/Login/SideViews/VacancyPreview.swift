@@ -11,12 +11,10 @@ struct VacancyPreview: View {
     
     @EnvironmentObject private var coordinator: Coordinator
     @ObservedObject var viewModel = AppViewModel()
-        var vacancy: Vacancy
-    
-        @State private var isFavorited = false
+    var vacancy: Vacancy
+    @State private var isFavorited = false
 
     var body: some View {
-        
         VStack(alignment: .leading, spacing: 8) {
             HStack {
                 if let lookingNumber = vacancy.lookingNumber {
@@ -50,7 +48,6 @@ struct VacancyPreview: View {
                 
             }
             
-            
             HStack {
                 Image("Опыт")
                     .foregroundColor(.uiWhite)
@@ -83,10 +80,7 @@ struct VacancyPreview: View {
         .onTapGesture {
             coordinator.push(.vacancyDetails(vacancy))
         }
-        
     }
-      
-        
 }
 
 struct VacancyPreview_Previews: PreviewProvider {

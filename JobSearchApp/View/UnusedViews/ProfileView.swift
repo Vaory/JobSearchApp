@@ -14,7 +14,6 @@ struct ProfileView: View {
     
     var body: some View {
         VStack {
-            
             Text("Профиль")
                 .foregroundColor(.uiWhite)
         }

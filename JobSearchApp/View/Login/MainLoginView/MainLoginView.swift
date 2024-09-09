@@ -11,9 +11,7 @@ import SwiftUI
 struct MainLoginView: View {
                                     
     var body: some View {
-        
         VStack (alignment: .leading) {
-            
             Text("Вход в личный кабинет")
                 .fontTitle2()
                 .foregroundColor(.uiWhite)
@@ -27,7 +25,6 @@ struct MainLoginView: View {
             EmployerLogin()
             
             Spacer()
-            
         }
         .padding(.top, 69)
         .background(Color.uiBlack)

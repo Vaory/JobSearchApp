@@ -13,7 +13,6 @@ struct RecomendationBlock: View {
         private let backgroundColor: Color
         private let title: LocalizedStringKey
         private let buttonTitle: LocalizedStringKey?
-        
        
         init(imageName: String,
              imageBackground: Color = .uiGray4,

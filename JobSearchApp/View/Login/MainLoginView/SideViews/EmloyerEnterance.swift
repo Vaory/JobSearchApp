@@ -14,12 +14,10 @@ struct EmployerLogin: View {
             .frame(height: 142)
             .overlay(
                 VStack(alignment: .leading) {
-                    
                     Text("Поиск cотрудников")
                         .foregroundColor(.uiWhite)
                         .fontTitle3()
                         
-
                     Spacer().frame(height: 8)
                     
                     Text("Размещение вакансий и доступ к базе резюме")
@@ -39,7 +37,8 @@ struct EmployerLogin: View {
                             .foregroundColor(.uiWhite)
                             .cornerRadius(50)
                     }
-                }.padding(.horizontal, 17))
+                }
+                .padding(.horizontal, 17))
     }
 }
 

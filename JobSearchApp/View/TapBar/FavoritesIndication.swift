@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct FavoritesIndication: View {
+    
     @ObservedObject var viewModel = AppViewModel()
     
     var body: some View {
         ZStack {
-            
             Circle()
                 .frame(height: 13)
                 .foregroundColor(.uiRed)

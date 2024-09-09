@@ -24,14 +24,14 @@ struct FavouritesView: View {
                 .foregroundColor(.uiGray3)
                 .padding(.vertical, 16)
             
-            
             ScrollView(.vertical) {
                 ForEach(viewModel.favoriteVacancies, id: \.id) { vacancy in
                     VacancyPreview(vacancy: vacancy)
                         
                     Spacer().frame(height: 8)
                 }
-            }.scrollIndicators(.never)
+            }
+            .scrollIndicators(.never)
         }
         .padding(.vertical, 32)
         .frame(maxWidth: .infinity, maxHeight: .infinity)

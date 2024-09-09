@@ -10,13 +10,11 @@ struct VerificationView: View {
     
     @EnvironmentObject var viewModel: AppViewModel
     @EnvironmentObject private var coordinator: Coordinator
-    
     @State var enteredVerificationCode: String = ""
     @FocusState private var isVerificationFieldFocused: Bool
     private let numberOfVerificationFields = 4
       
     var body: some View {
-        
         VStack(alignment: .leading, spacing: 16) {
             
             Spacer()
@@ -31,9 +29,7 @@ struct VerificationView: View {
                 .fontTitle3()
                 .foregroundColor(.white)
     
-            
             HStack {
-                
                 VerifivationFieldView(numberOfFields: numberOfVerificationFields, verificationCode: $enteredVerificationCode)
                     .onChange(of: enteredVerificationCode) { newValue in
                         if newValue.count == numberOfVerificationFields {

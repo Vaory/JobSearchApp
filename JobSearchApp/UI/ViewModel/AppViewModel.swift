@@ -18,7 +18,7 @@ class AppViewModel: ObservableObject {
         loadVacanciesFromJSONFile()
         updateFavoriteVacancies()
     }
-                                          
+    
     // Обновление лайкнутых вакансий
     func updateFavoriteVacancies() {
         favoriteVacancies = allVacancies.filter { $0.isFavorite }
@@ -70,21 +70,24 @@ class AppViewModel: ObservableObject {
     }
         
     // Парсинг JSON файла
-    func loadVacanciesFromJSONFile() -> [Vacancy]? {
+    func loadVacanciesFromJSONFile() {
         guard let path = Bundle.main.path(forResource: "vacancies", ofType: "json") else {
             print("Не удалось найти файл json")
-            return nil
+            return
         }
         do {
             let data = try Data(contentsOf: URL(fileURLWithPath: path))
             let decoder = JSONDecoder()
             let root = try decoder.decode(Root.self, from: data)
-            allVacancies = root.vacancies
-            updateFavoriteVacancies() // Обновляем список избранных вакансий после загрузки
-            return root.vacancies
+           
+            handleResult(root.vacancies)
         } catch {
             print("Ошибка при загрузке данных из файла: \(error)")
-            return nil
         }
+    }
+    
+    func handleResult(_ vacancies: [Vacancy]) {
+        allVacancies = vacancies
+        updateFavoriteVacancies() // Обновляем список избранных вакансий после загрузки
     }
 }

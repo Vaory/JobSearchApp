@@ -8,7 +8,21 @@
 import SwiftUI
 
 extension Text {
-    
+//    enum TextSize: CGFloat {
+//        case size16 = 16.0
+//        case size20 = 20.0
+//    }
+//
+//    func fontSemibold(_ size: TextSize = .size20) -> Text {
+//        return self.font(Font.custom("SFProDisplay-Semibold", size: size))
+//    }
+//    
+//    VStack {
+//        Text()
+//
+//        Text()
+//    }
+//    .fontSemibold(.size16)
     // Кастомные шрифты согласно макету
     
     func fontTitle1() -> Text {

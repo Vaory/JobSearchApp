@@ -13,6 +13,9 @@ struct VerificationView: View {
     @State var enteredVerificationCode: String = ""
     @FocusState private var isVerificationFieldFocused: Bool
     private let numberOfVerificationFields = 4
+    private var isInputAvailable: Bool {
+        enteredVerificationCode.count < numberOfVerificationFields
+    }
       
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
@@ -38,19 +41,20 @@ struct VerificationView: View {
                     .focused($isVerificationFieldFocused)
             }
             
-            Button(action: {
+            Button {
                 coordinator.changeTab(to: .search)
                 viewModel.isVerifyed = true
                
-            }, label: {
+            } label: {
                 Text("Подтвердить")
                     .frame(height: 48)
                     .frame(maxWidth: .infinity)
                     .font(.custom("SFProDisplay-Semibold", size: 14))
-                    .foregroundColor(enteredVerificationCode.count < numberOfVerificationFields ? .uiGray4 : .uiWhite)
-                    .background(enteredVerificationCode.count < numberOfVerificationFields  ? Color.uiDarkBlue : Color.uiBlue)
+                    .foregroundColor(isInputAvailable ? .uiGray4 : .uiWhite)
+                    .background(isInputAvailable ? Color.uiDarkBlue : Color.uiBlue)
                     .cornerRadius(8)
-            }).disabled(enteredVerificationCode.count < numberOfVerificationFields)
+            }
+            .disabled(enteredVerificationCode.count < numberOfVerificationFields)
             
             Spacer()
         }

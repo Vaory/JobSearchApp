@@ -32,15 +32,18 @@ struct RecomendationBlock: View {
                     .background(Color.uiGray1)
                     .frame(maxWidth: .infinity, alignment: .leading)
                     .padding(.bottom, 16)
+                
                 Text(title)
                     .fontTitle4()
                     .foregroundStyle(.white)
                     .tracking(-0.1)
+                
                 if let buttonTitle = buttonTitle {
                     Text(buttonTitle)
                         .fontTitle4()
                         .foregroundStyle(Color.uiGreen)
                 }
+                
                 Spacer(minLength: 0)
             }
             .padding(8)

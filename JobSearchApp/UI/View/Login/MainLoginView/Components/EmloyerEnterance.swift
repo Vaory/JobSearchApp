@@ -18,17 +18,19 @@ struct EmployerLogin: View {
                         .foregroundColor(.uiWhite)
                         .fontTitle3()
                         
-                    Spacer().frame(height: 8)
+                    Spacer()
+                        .frame(height: 8)
                     
                     Text("Размещение вакансий и доступ к базе резюме")
                         .foregroundColor(.uiWhite)
                         .fontText1()
                     
-                    Spacer().frame(height: 16)
+                    Spacer()
+                        .frame(height: 16)
                     
-                    Button(action: {
-                        print("")
-                    }) {
+                    Button {
+                       // заглушкa
+                    } label: {
                         Text("Я ищу сотрудников")
                             .frame(maxWidth: .infinity)
                             .font(Font.custom("SFProDisplay-Regular", size: 14))

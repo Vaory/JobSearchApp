@@ -13,7 +13,6 @@ struct MessagesView: View {
     
     var body: some View {
         VStack {
-            
             Text("Сообщения")
                 .foregroundColor(.uiWhite)
         }

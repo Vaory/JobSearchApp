@@ -14,8 +14,6 @@ struct EmployeeLogin: View {
 
     @State private var isEmailIncorrect = false
     
-    var emailText: String = ""
-    
     private let errorText = Text("Введен неправильный e-mail")
         .font(.system(size: 14))
         .foregroundColor(.uiRed)
@@ -24,7 +22,7 @@ struct EmployeeLogin: View {
         ZStack {
             Color.uiGray1
                 .cornerRadius(8)
-                .frame(height: 179)
+                .frame(height: .blockHeight)
                 .overlay(
                     VStack (alignment: .leading) {
                         
@@ -62,7 +60,8 @@ struct EmployeeLogin: View {
                                             .resizable()
                                             .frame(width: 24, height: 24)
                                         
-                                        Spacer().frame(width: 8)
+                                        Spacer()
+                                            .frame(width: 8)
                                         
                                         Text("Электронная почта или телефон")
                                             .font(Font.custom("SFProDisplay-Regular", size: 14))
@@ -124,6 +123,14 @@ struct EmployeeLogin: View {
                     .padding(.horizontal, 17))
         }
     }
+}
+
+enum Constants {
+    static let blockHeight: CGFloat = 179.0
+}
+
+private extension CGFloat {
+    static let blockHeight: Self = 179.0
 }
 
 struct EmployeeLogin_Previews: PreviewProvider {

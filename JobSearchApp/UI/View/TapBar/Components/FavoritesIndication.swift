@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct FavoritesIndication: View {
-    
+    // Прокинуть корректно
     @ObservedObject var viewModel = AppViewModel()
     
     var body: some View {

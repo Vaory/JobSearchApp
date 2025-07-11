@@ -24,7 +24,7 @@
 Реализовано с помощью проверки через Regex-метод и отслеживания состояния поле ввода.
 
 <p float="left">
-  <img src="GitScreenshots/Screenshot1png.png" width="200" />
+  <img src="JobSearchApp/Resources/GitScreenshotsScreenshot1png.png" width="200" />
   <img src="GitScreenshots/Screenshot2.png" width="200" />
 </p>
 

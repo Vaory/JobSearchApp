@@ -24,34 +24,34 @@
 Реализовано с помощью проверки через Regex-метод и отслеживания состояния поле ввода.
 
 <p float="left">
-  <img src="JobSearchApp/Resources/GitScreenshotsScreenshot1png.png" width="200" />
-  <img src="GitScreenshots/Screenshot2.png" width="200" />
+  <img src="JobSearchApp/Recources/GitScreenshots/Screenshot1png.png" width="200" />
+  <img src="JobSearchApp/Recources/GitScreenshots/Screenshot2.png" width="200" />
 </p>
 
 ## Экран авторизации по коду
 Поле для ввода кода. Состоит из 4-х ячеек, в каждой из которых можно ввести только одну цифру. Для ввода доступны только цифры, любые другие символы не отображаются. При вводе в ячейке цифры курсор автоматически переходит на ячейку справа. Изначальное положение курсора - крайняя левая ячейка. 
 Реализовано с помощью модели кастомных текстфилдов. Под капотом: Combine(Just) и свойство @FocusState
 <p float="left">
-  <img src="GitScreenshots/Screenshot3.png" width="200" />
-  <img src="GitScreenshots/Screenshot4.png" width="200" />
+  <img src="JobSearchApp/Recources/GitScreenshots/Screenshot3.png" width="200" />
+  <img src="JobSearchApp/Recources/GitScreenshots/Screenshot4.png" width="200" />
 </p>
 
 ## Экран "Поиска" с отображением превью вакансий
 <p float="left">
-  <img src="GitScreenshots/Screenshot5.png" width="200" />
-  <img src="GitScreenshots/Screenshot6.png" width="200" />
+  <img src="JobSearchApp/Recources/GitScreenshots/Screenshot5.png" width="200" />
+  <img src="JobSearchApp/Recources/GitScreenshots/Screenshot6.png" width="200" />
   
 </p>
 
 
 ## Экран "Детального просмотра" с отображением полной информации вакансии
 <p float="left">
-  <img src="GitScreenshots/Screenshot7.png" width="200" />
+  <img src="JobSearchApp/Recources/GitScreenshots/Screenshot7.png" width="200" />
 </p>
 
 
 ## Экран "Избранное" с лайкнутыми вакансиями
 <p float="left">
-  <img src="GitScreenshots/Screenshot8.png" width="200" />
+  <img src="JobSearchApp/Recources/GitScreenshots/Screenshot8.png" width="200" />
 </p>
 
